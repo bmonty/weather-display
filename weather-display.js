@@ -12,9 +12,11 @@ const weatherDisplay = () => {
     var tempData = 'Temp: not updated\nHumidity: not updated';
     var display = displayTypes.temp;
     var timeUpdate = false;
-    
+
+    // this is the physical pin where your LED is connected
     rpio.open(26, rpio.OUTPUT, rpio.LOW);
 
+    // physical pins for HD77480 connection, change as appropriate
     const lcd = new hd44780({
         pinRs: 18,
         pinEnable: 22,
@@ -23,6 +25,7 @@ const weatherDisplay = () => {
         lcdRows: 2
     });
 
+    // open stdin to receive data from rtl_433
     const rl = readline.createInterface({
         input: process.stdin
     });
