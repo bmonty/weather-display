@@ -1,11 +1,20 @@
 {
-  "name": "weather_display",
-  "version": "1.0.0",
-  "description": "Display current weather data on an LCD.",
+  "name": "weather-display",
+  "version": "0.1.0",
+  "description": "Display weather data on an LCD.",
+  "private": true,
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "Benjamin Montgomery <bmontgom@montynet.org>",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.montynet.org/raspberrypi/weather-display.git"
   },
-  "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "gpio-hd44780-driver": "^0.1.1",
+    "rpio": "^0.9.20"
+  },
+  "engines": {
+    "node": ">=8.9.4"
+  }
 }
